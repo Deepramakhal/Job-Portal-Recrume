@@ -1,0 +1,42 @@
+package recru.me.backend.model;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import lombok.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+
+@Entity
+@Table(name = "job")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
+public class Job {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    @Lob
+    @Column(columnDefinition = "TEXT")
+    private String description;
+    private String location;
+    private String work_place; // on-site, remote, hybrid
+    private String work_mode; // full-time, part-time, remote
+    private String experience;
+    private int min_salary;
+    private int max_salary;
+    private String company;
+    private String companyLogo;
+    private Date posted_at;
+    private Date deadline;
+    private Long postedBy;
+    @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private Set<JobSkill> jobSkills = new HashSet<>();
+}

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+.glow-text {
+  text-shadow: 0 0 5px #f4a300, 0 0 10px #f4a300, 0 0 15px #f4a300;
+}
+
+.hero-bg {
+  background-image: url('hero.png');
+  background-size: 768px 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+/* UserHome.css */
+
+.filter-panel {
+  position: fixed;
+  right: 0;
+  bottom: 28px;
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+.filter-panel.show {
+  transform: translateX(0);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  .print\\:hidden {
+    display: none !important;
+  }
+  .print\\:p-0 {
+    padding: 0 !important;
+  }
+  .print\\:mt-0 {
+    margin-top: 0 !important;
+  }
+}
+
+.card-inset-pressed {
+  box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.611),
+              inset 0 -6px 18px rgba(255, 255, 255, 0.648),
+              0 1px 4px rgba(0, 0, 0, 0.182); /* outer soft shadow for modern look */
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+  background-color: white;
+  border-radius: 0.75rem;
+}

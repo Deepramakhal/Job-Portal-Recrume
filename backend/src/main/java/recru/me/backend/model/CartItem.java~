@@ -1,0 +1,4 @@
+package recru.me.backend.model;
+
+public class CartItem {
+}

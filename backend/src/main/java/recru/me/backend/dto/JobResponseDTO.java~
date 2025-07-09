@@ -1,0 +1,28 @@
+package recru.me.backend.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class JobResponseDTO {
+    private Long id;
+    private String title;
+    private String company;
+    private String location;
+    private String workPlace;
+    private String workMode;
+    private int minSalary;
+    private int maxSalary;
+    private String experience;
+    private String description;
+    private int matchingSkills;
+    private Date postedAt;
+    private Date deadline;
+    private List<String> skills;
+}

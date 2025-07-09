@@ -1,0 +1,13 @@
+package recru.me.backend.dto;
+
+import java.util.List;
+
+//public class ChatRequestDTO {
+//    private List<GeminiRequestDTO.Content> messages;
+//    public List<GeminiRequestDTO.Content> getMessages() {
+//        return messages;
+//    }
+//    public void setMessages(List<GeminiRequestDTO.Content> messages) {
+//        this.messages = messages;
+//    }
+//}

@@ -1,0 +1,14 @@
+package recru.me.backend.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.*;
+
+@Entity
+@Data
+@Table(name = "saved_jobs")
+@AllArgsConstructor @NoArgsConstructor @Getter @Setter
+public class SavedJobs {
+    private Long user_id;
+    private Long job_id;
+}

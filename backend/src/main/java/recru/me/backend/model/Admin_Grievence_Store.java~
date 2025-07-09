@@ -1,0 +1,14 @@
+package recru.me.backend.model;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+public class Admin_Grievence_Store {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String role;
+    private Long sender_id;
+    private String grievence;
+}
